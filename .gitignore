@@ -1,0 +1,9 @@
+# Tệp hệ thống
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+
+# Tệp tạm khi kiểm thử
+_*.js
+node_modules/
