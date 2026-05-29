@@ -36,10 +36,13 @@ Máy chủ sẽ chạy tại `http://localhost:8000` (cần đã cài Python ho�
 
 ## 🧠 Công cụ giúp NHỚ bài (mới)
 Ngoài đọc – hiểu, web có "vòng học chủ động" giúp nhớ lâu (lưu ngay trong trình duyệt, không cần đăng nhập):
-- **Tự kiểm tra (quiz chấm điểm)** ở cuối mỗi bài: trắc nghiệm / điền đáp số, chấm ngay đúng–sai kèm giải thích. *(Hiện có cho Chương I–III; các chương sau sẽ bổ sung dần.)*
+- **Tự kiểm tra (quiz chấm điểm)** ở cuối **mọi bài** (39 bài, 117 câu): trắc nghiệm / điền đáp số, chấm ngay đúng–sai kèm giải thích.
 - **Lưu tiến độ**: đánh dấu "đã học", trang chủ hiện % mỗi chương + nút "Tiếp tục bài đang học".
 - **Flashcard công thức** ([flashcards.html](flashcards.html)): tự sinh từ công thức các bài, ôn theo lịch ngắt quãng (nhớ → giãn lịch; quên → ôn lại sớm).
+- **Bảng công thức tổng hợp** ([cong-thuc.html](cong-thuc.html)): mọi công thức/định lí gom theo chương để tra cứu nhanh.
 - **Sổ tay lỗi sai** ([loi-sai.html](loi-sai.html)): câu quiz làm sai tự được ghi lại để ôn đúng chỗ yếu.
+- **Chỉnh cỡ chữ** (nút A− / A+ góc dưới phải mọi trang) cho con dễ đọc.
+- **Đưa lên mạng**: xem hướng dẫn trong [DEPLOY.md](DEPLOY.md) (nhanh nhất: Netlify Drop).
 
 > Dữ liệu học (tiến độ, lỗi sai, lịch flashcard) lưu bằng `localStorage` của trình duyệt trên máy con — riêng tư, không gửi đi đâu. Xoá dữ liệu trình duyệt sẽ xoá tiến độ.
 
@@ -63,14 +66,18 @@ TOAN 8/
 ├─ index.html          Trang chủ (lộ trình 10 chương + tiến độ học)
 ├─ bai.html            Trang hiển thị một bài học (mở theo ?id=...)
 ├─ flashcards.html     Flashcard công thức (ôn ngắt quãng)
+├─ cong-thuc.html      Bảng công thức tổng hợp
 ├─ loi-sai.html        Sổ tay lỗi sai
+├─ DEPLOY.md           Hướng dẫn đưa web lên mạng
 ├─ start.bat           (tùy chọn) chạy máy chủ cục bộ
 ├─ css/style.css       Giao diện
 ├─ js/
 │  ├─ app.js              Registry trung tâm + lộ trình + render trang chủ
 │  ├─ store.js            Lưu tiến độ/quiz/lỗi sai/flashcard (localStorage)
+│  ├─ prefs.js            Chỉnh cỡ chữ (lưu localStorage)
 │  ├─ render-lesson.js    Dựng trang bài học + quiz chấm điểm
 │  ├─ flashcards.js       Logic flashcard
+│  ├─ formulas.js         Logic bảng công thức
 │  ├─ mistakes.js         Logic sổ tay lỗi sai
 │  └─ widgets/
 │     ├─ area-model.js    Mô hình diện tích (nhân / chia đa thức)
