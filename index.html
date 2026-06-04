@@ -3,60 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tự học Toán 8 – Kết nối tri thức</title>
-  <link rel="stylesheet" href="vendor/katex/katex.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Góc học Toán của con · Chọn lớp</title>
+  <style>
+    :root{
+      --c-bg:#f4f7fb; --c-card:#fff; --c-ink:#1f2733; --c-ink-soft:#55617a;
+      --c-primary:#2563eb; --c-primary-dark:#1d4ed8; --c-accent:#0ea5a4;
+      --c-line:#e3e8f0; --radius:16px; --shadow:0 2px 10px rgba(31,39,51,.06);
+      --shadow-hover:0 10px 28px rgba(37,99,235,.18);
+      --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:var(--font);color:var(--c-ink);background:var(--c-bg);
+      line-height:1.65;min-height:100vh;display:flex;flex-direction:column;}
+    .container{max-width:980px;margin:0 auto;padding:0 18px;width:100%;}
+    .site-header{background:linear-gradient(135deg,#2563eb 0%,#0ea5a4 100%);color:#fff;
+      padding:34px 0 38px;text-align:center;box-shadow:var(--shadow);}
+    .site-header .logo{font-size:40px;line-height:1;background:rgba(255,255,255,.2);
+      width:74px;height:74px;border-radius:20px;display:flex;align-items:center;
+      justify-content:center;margin:0 auto 14px;}
+    .site-header h1{margin:0;font-size:30px;font-weight:800;}
+    .site-header p{margin:8px 0 0;opacity:.93;font-size:16px;}
+    main{flex:1;}
+    .pick-title{font-size:22px;margin:30px 0 6px;text-align:center;}
+    .pick-sub{color:var(--c-ink-soft);text-align:center;margin:0 0 24px;}
+    .grade-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;margin-bottom:30px;}
+    .grade-card{display:flex;flex-direction:column;background:var(--c-card);
+      border:1px solid var(--c-line);border-radius:var(--radius);padding:22px 22px 20px;
+      box-shadow:var(--shadow);text-decoration:none;color:inherit;
+      transition:transform .16s,box-shadow .16s,border-color .16s;border-top:5px solid var(--c-primary);}
+    .grade-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);text-decoration:none;}
+    .grade-card.g9{border-top-color:var(--c-accent);}
+    .grade-icon{font-size:34px;width:62px;height:62px;border-radius:16px;display:flex;
+      align-items:center;justify-content:center;background:#e8f0fe;margin-bottom:12px;}
+    .g9 .grade-icon{background:#defcfb;}
+    .grade-card h2{margin:0;font-size:23px;font-weight:800;}
+    .grade-card .desc{color:var(--c-ink-soft);font-size:15px;margin:4px 0 12px;}
+    .grade-card ul{margin:0 0 16px;padding-left:20px;color:var(--c-ink-soft);font-size:14.5px;}
+    .grade-card ul li{margin:3px 0;}
+    .go{margin-top:auto;align-self:flex-start;background:var(--c-primary);color:#fff;
+      font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;}
+    .g9 .go{background:var(--c-accent);}
+    .grade-card:hover .go{background:var(--c-primary-dark);}
+    .note{background:var(--c-card);border:1px solid var(--c-line);border-radius:var(--radius);
+      padding:14px 18px;color:var(--c-ink-soft);font-size:14.5px;box-shadow:var(--shadow);
+      margin-bottom:30px;}
+    .site-footer{text-align:center;color:var(--c-ink-soft);font-size:14px;padding:22px 0;
+      border-top:1px solid var(--c-line);}
+    @media(max-width:520px){.site-header h1{font-size:25px;}.grade-card h2{font-size:21px;}}
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <div class="brand">
-        <div class="logo">📐</div>
-        <div>
-          <h1>Tự học Toán 8</h1>
-          <p class="tagline">Theo sách Kết nối tri thức với cuộc sống · Học hiểu → Làm được → Tự kiểm tra</p>
-        </div>
-      </div>
+      <div class="logo">📚</div>
+      <h1>Góc học Toán của con</h1>
+      <p>Chọn lớp để bắt đầu — học hiểu → làm được → tự kiểm tra</p>
     </div>
   </header>
 
   <main class="container">
-    <section class="intro-block">
-      <h2>Chào con! 👋</h2>
-      <p>Ở đây mỗi bài học đi theo 7 bước: <b>tình huống thực tế → lý thuyết ngắn gọn →
-      hình minh hoạ tương tác → ví dụ từng bước → lỗi thường gặp → bài tập 3 mức</b>.</p>
-      <p>Làm bài tập xong hãy thử tự nghĩ trước, bí thì bấm <b>Gợi ý</b> (mở dần từng bước),
-      cuối cùng mới bấm <b>Xem lời giải</b> để đối chiếu nhé.</p>
-    </section>
+    <h2 class="pick-title">👇 Con muốn học lớp nào?</h2>
+    <p class="pick-sub">Bấm vào một lớp để vào học. Mỗi lớp lưu tiến độ riêng ngay trong trình duyệt.</p>
 
-    <h2 class="section-title">🗺️ Lộ trình Toán 8</h2>
-    <div id="home-root"><p style="color:#55617a">Đang tải lộ trình…</p></div>
+    <div class="grade-grid">
+      <a class="grade-card g8" href="lop8/index.html">
+        <div class="grade-icon">📐</div>
+        <h2>Toán 8</h2>
+        <div class="desc">Kết nối tri thức với cuộc sống</div>
+        <ul>
+          <li>10 chương · 39 bài · 312 bài tập</li>
+          <li>Đại số · Hình học · Thống kê · Xác suất</li>
+          <li>Hình tương tác + quiz chấm điểm</li>
+        </ul>
+        <span class="go">Vào học →</span>
+      </a>
+
+      <a class="grade-card g9" href="lop9/index.html">
+        <div class="grade-icon">📘</div>
+        <h2>Toán 9</h2>
+        <div class="desc">Kết nối tri thức với cuộc sống</div>
+        <ul>
+          <li>10 chương · lộ trình đầy đủ</li>
+          <li>Căn bậc hai · Hàm số y=ax² · Đường tròn…</li>
+          <li>Đang bổ sung dần từng chương</li>
+        </ul>
+        <span class="go">Vào học →</span>
+      </a>
+    </div>
+
+    <div class="note">
+      💡 <b>Mẹo:</b> Có thể tải web về máy học offline, hoặc đưa lên mạng để học mọi nơi
+      (xem hướng dẫn trong tệp <b>DEPLOY.md</b>). Mỗi thiết bị lưu tiến độ riêng.
+    </div>
   </main>
 
   <footer class="site-footer">
-    Tự học Toán 8 · Bám sát SGK Kết nối tri thức với cuộc sống (Chương trình GDPT 2018)
+    Góc học Toán của con · Bám sát SGK Kết nối tri thức với cuộc sống (GDPT 2018) · Dành cho con yêu 💛
   </footer>
-
-  <!-- KaTeX (offline) -->
-  <script src="vendor/katex/katex.min.js"></script>
-  <script src="vendor/katex/auto-render.min.js"></script>
-  <!-- App + dữ liệu chương -->
-  <script src="js/app.js"></script>
-  <script src="js/store.js"></script>
-  <script src="js/prefs.js"></script>
-  <script src="data/chuong-01.js"></script>
-  <script src="data/chuong-02.js"></script>
-  <script src="data/chuong-03.js"></script>
-  <script src="data/chuong-04.js"></script>
-  <script src="data/chuong-05.js"></script>
-  <script src="data/chuong-06.js"></script>
-  <script src="data/chuong-07.js"></script>
-  <script src="data/chuong-08.js"></script>
-  <script src="data/chuong-09.js"></script>
-  <script src="data/chuong-10.js"></script>
-  <script>
-    MATH8.renderHome("home-root");
-    MATH8.typeset(document.body);
-  </script>
 </body>
 </html>

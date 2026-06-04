@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tự học Toán 9 – Kết nối tri thức</title>
+  <link rel="stylesheet" href="vendor/katex/katex.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <div class="container">
+      <a class="home-link" href="../index.html">📚 Chọn lớp</a>
+      <span class="crumb">Tự học <b>Toán 9</b></span>
+    </div>
+  </nav>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">📐</div>
+        <div>
+          <h1>Tự học Toán 9</h1>
+          <p class="tagline">Theo sách Kết nối tri thức với cuộc sống · Học hiểu → Làm được → Tự kiểm tra</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro-block">
+      <h2>Chào con! 👋</h2>
+      <p>Ở đây mỗi bài học đi theo 7 bước: <b>tình huống thực tế → lý thuyết ngắn gọn →
+      hình minh hoạ tương tác → ví dụ từng bước → lỗi thường gặp → bài tập 3 mức</b>.</p>
+      <p>Làm bài tập xong hãy thử tự nghĩ trước, bí thì bấm <b>Gợi ý</b> (mở dần từng bước),
+      cuối cùng mới bấm <b>Xem lời giải</b> để đối chiếu nhé.</p>
+    </section>
+
+    <h2 class="section-title">🗺️ Lộ trình Toán 9</h2>
+    <div id="home-root"><p style="color:#55617a">Đang tải lộ trình…</p></div>
+  </main>
+
+  <footer class="site-footer">
+    Tự học Toán 9 · Bám sát SGK Kết nối tri thức với cuộc sống (Chương trình GDPT 2018)
+  </footer>
+
+  <!-- KaTeX (offline) -->
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="vendor/katex/auto-render.min.js"></script>
+  <!-- App + dữ liệu chương -->
+  <script src="js/app.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/prefs.js"></script>
+  <script src="data/chuong-01.js"></script>
+  <script src="data/chuong-02.js"></script>
+  <script src="data/chuong-03.js"></script>
+  <script src="data/chuong-04.js"></script>
+  <script src="data/chuong-05.js"></script>
+  <script src="data/chuong-06.js"></script>
+  <script src="data/chuong-07.js"></script>
+  <script src="data/chuong-08.js"></script>
+  <script src="data/chuong-09.js"></script>
+  <script src="data/chuong-10.js"></script>
+  <script>
+    MATH9.renderHome("home-root");
+    MATH9.typeset(document.body);
+  </script>
+</body>
+</html>
